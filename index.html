@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Labubus Full Experience</title>
+  <title>Best Gooning Experience</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
@@ -46,22 +46,29 @@
   </style>
 </head>
 <body>
-  <!-- Video con audio incluido -->
-  <video id="bg-video" autoplay loop playsinline>
+  <!-- Video de fondo -->
+  <video id="bg-video" autoplay muted loop playsinline>
     <source src="gooner.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 
-  <!-- Botón para habilitar sonido (por restricciones de autoplay en navegadores) -->
+  <!-- Audio de fondo -->
+  <audio id="bg-audio" loop>
+    <source src="gooning.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Botón para habilitar sonido -->
   <button class="btn" onclick="enableSound()">🔊 Enable Sound</button>
 
   <div class="overlay">~ xzonix</div>
 
   <script>
     function enableSound() {
+      const audio = document.getElementById('bg-audio');
       const video = document.getElementById('bg-video');
+      audio.play();
       video.muted = false;
-      video.play();
     }
   </script>
 </body>
